@@ -2351,7 +2351,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 if test "${with_cuda_arch+set}" = set; then :
   withval=$with_cuda_arch; CUDA_ARCH="$withval"
 else
-  CUDA_ARCH=sm_50
+  CUDA_ARCH=compute_37
 fi
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: setting CUDA ARCH to ${CUDA_ARCH}" >&5
@@ -2365,7 +2365,7 @@ $as_echo "setting CUDA ARCH to ${CUDA_ARCH}" >&6; }
 if test "${with_cuda_home+set}" = set; then :
   withval=$with_cuda_home; CUDA_HOME="$withval"
 else
-  CUDA_HOME=/usr/local/cuda
+  CUDA_HOME=/usr/local/cuda-8.0
 fi
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: setting CUDA home directory to ${CUDA_HOME}" >&5
@@ -2464,7 +2464,7 @@ LIBS="-lcuda"
 if test "${with_boost_home+set}" = set; then :
   withval=$with_boost_home; BOOST_HOME="$withval"
 else
-  BOOST_HOME=/usr/local/boost
+  BOOST_HOME=/usr
 fi
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: setting BOOST home directory to ${BOOST_HOME}" >&5
