@@ -734,7 +734,7 @@ SVM::SVM() :
 		m_foundSize = 500;
 		CUDA_VERIFY(
 			"Failed to allocate space for found keys on host",
-			cudaMallocHost((void**)&m_foundKeys, m_foundSize * sizeof( float ) )
+			cudaMallocHost((void**)&m_foundKeys, 10 * sizeof( float ) )
 		);
 		CUDA_VERIFY(
 			"Failed to allocate space for found values on host",
