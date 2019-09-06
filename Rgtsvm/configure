@@ -2365,7 +2365,7 @@ $as_echo "setting CUDA ARCH to ${CUDA_ARCH}" >&6; }
 if test "${with_cuda_home+set}" = set; then :
   withval=$with_cuda_home; CUDA_HOME="$withval"
 else
-  CUDA_HOME=/usr/local/cuda-9.0
+  CUDA_HOME=/usr/local/cuda-8.0
 fi
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: setting CUDA home directory to ${CUDA_HOME}" >&5
