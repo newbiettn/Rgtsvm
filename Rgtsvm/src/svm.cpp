@@ -734,16 +734,16 @@ SVM::SVM() :
 		m_foundSize = 4096;
 		CUDA_VERIFY(
 			"Failed to allocate space for found keys on host",
-			cudaMallocHost((void**)&m_foundKeys, m_foundSize * sizeof( float ) )
+			cudaMalloc((void**)&m_foundKeys, m_foundSize * sizeof( float ) )
 		);
 		CUDA_VERIFY(
 			"Failed to allocate space for found values on host",
-			cudaMallocHost( &m_foundValues, m_foundSize * sizeof( boost::uint32_t ) )
+			cudaMalloc( &m_foundValues, m_foundSize * sizeof( boost::uint32_t ) )
 		);
 
 		CUDA_VERIFY(
 			"Failed to allocate space for batch squared norms on host",
-			cudaMallocHost( &m_batchVectorNormsSquared, 16 * sizeof( float ) )
+			cudaMalloc( &m_batchVectorNormsSquared, 16 * sizeof( float ) )
 		);
 		CUDA_VERIFY(
 			"Failed to allocate space for batch squared norms on device",
